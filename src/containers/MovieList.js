@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard';
 import fetchedMovies from '../data/fetchedMovies.json';
 
 const MovieList = () => {
-    const [movies, setMovies] = useState(fetchedMovies.results);
+    const [movies] = useState(fetchedMovies.results);
 
     return (
         <Box sx={{
