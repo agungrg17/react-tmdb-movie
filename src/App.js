@@ -8,12 +8,14 @@ import { ThemeProvider } from '@mui/material';
 
 import Navbar from './components/Navbar';
 import theme from './themes/theme';
+import MovieCard from './components/MovieCard';
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar></Navbar>
+        <MovieCard />
       </div>
     </ThemeProvider>
   );
