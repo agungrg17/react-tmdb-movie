@@ -9,7 +9,7 @@ const MovieList = () => {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const fetchedMovies = await axios.get("https://api.themoviedb.org/3/trending/movie/week?api_key=");
+            const fetchedMovies = await axios.get("https://api.themoviedb.org/3/trending/movie/week?api_key=1e5238a16446199e1393210ccac016b4");
             setMovies(fetchedMovies.data.results);
         }
         
@@ -26,7 +26,7 @@ const MovieList = () => {
         }}>
             {
                 movies.map(movie => (
-                    <MovieCard movie={movie}></MovieCard>
+                    <MovieCard key={movie.id} movie={movie}></MovieCard>
                 ))
             }
         </Box>
