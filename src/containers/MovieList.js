@@ -30,7 +30,7 @@ const MovieList = () => {
         }}>
             {
                 movies.map(movie => (
-                    <MovieCard movie={movie}></MovieCard>
+                    <MovieCard key={movie.id} movie={movie}></MovieCard>
                 ))
             }
         </Box>
