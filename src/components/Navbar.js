@@ -39,6 +39,7 @@ const Navbar = () => {
           <Box sx={{ display: 'block' }}>
             {navItems.map((item) => (
               <NavLink
+                key={item.link}
                 to={item.link}
                 className={({ isActive }) => isActive ? 'nav-active' : 'nav-inactive'}
               >
