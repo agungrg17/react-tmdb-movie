@@ -9,8 +9,8 @@ import { ThemeProvider, Box } from '@mui/material';
 import Navbar from './components/Navbar';
 import MovieList from './containers/MovieList';
 import theme from './themes/theme';
-import { Route, Routes } from 'react-router-dom';
 import Pricing from './containers/Pricing';
+import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -18,12 +18,11 @@ const App = () => {
       <div className="App">
         <Navbar></Navbar>
         <Routes>
-          <Route path='/' element={<MovieList />} />
-          <Route path='about' element={<Box sx={{ mt: 10 }}>Halaman About</Box>} />
-          <Route path='indonesian' element={<Box sx={{ mt: 10 }}>Halaman Indonesia</Box>} />
-          <Route path='pricing' element={<Pricing/>} />
+        <Route path="/" element={<MovieList />} />
+          <Route path="about" element={<Box sx={{ mt: 10 }}>Halaman about</Box>} />
+          <Route path="indonesian" element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>} />
+          <Route path="pricing" element={<Pricing />} />
         </Routes>
-        {/* <MovieList></MovieList> */}
       </div>
     </ThemeProvider>
   );
