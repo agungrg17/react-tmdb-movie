@@ -9,6 +9,7 @@ import { ThemeProvider, Box } from '@mui/material';
 import Navbar from './components/Navbar';
 import MovieList from './containers/MovieList';
 import theme from './themes/theme';
+import About from './containers/About';
 import Pricing from './containers/Pricing';
 import { Route, Routes } from 'react-router-dom';
 import Subscribed from './containers/Subscribed';
@@ -19,8 +20,11 @@ const App = () => {
       <div className="App">
         <Navbar></Navbar>
         <Routes>
-        <Route path="/" element={<MovieList />} />
-          <Route path="about" element={<Box sx={{ mt: 10 }}>Halaman about</Box>} />
+          <Route path="/" element={<MovieList />} />
+          <Route path="about" element={<About />}>
+            <Route path="description" element={<Box sx={{ mt: 10 }}>Provides movies in your hand</Box>} />
+            <Route path="services" element={<Box sx={{ mt: 10 }}>Streaming movies, Indonesian film, and film review.</Box>} />
+          </Route>
           <Route path="indonesian" element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="subscribed/:plan" element={<Subscribed />} />
