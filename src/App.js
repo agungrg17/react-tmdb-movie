@@ -4,13 +4,13 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider, Box } from '@mui/material';
 
 import Navbar from './components/Navbar';
 import MovieList from './containers/MovieList';
 import theme from './themes/theme';
 import { Route, Routes } from 'react-router-dom';
-import { Box } from '@mui/system';
+import Pricing from './containers/Pricing';
 
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
           <Route path='/' element={<MovieList />} />
           <Route path='about' element={<Box sx={{ mt: 10 }}>Halaman About</Box>} />
           <Route path='indonesian' element={<Box sx={{ mt: 10 }}>Halaman Indonesia</Box>} />
-          <Route path='pricing' element={<Box sx={{ mt: 10 }}>Halaman Pricing</Box>} />
+          <Route path='pricing' element={<Pricing/>} />
         </Routes>
         {/* <MovieList></MovieList> */}
       </div>
