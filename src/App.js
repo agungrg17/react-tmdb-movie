@@ -11,6 +11,7 @@ import MovieList from './containers/MovieList';
 import theme from './themes/theme';
 import Pricing from './containers/Pricing';
 import { Route, Routes } from 'react-router-dom';
+import Subscribed from './containers/Subscribed';
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
           <Route path="about" element={<Box sx={{ mt: 10 }}>Halaman about</Box>} />
           <Route path="indonesian" element={<Box sx={{ mt: 10 }}>Halaman indonesian</Box>} />
           <Route path="pricing" element={<Pricing />} />
-          <Route path="subscribed" element={<Box sx={{ mt: 10 }}>Thank you for subscribing!</Box>} />
+          <Route path="subscribed/:plan" element={<Subscribed />} />
         </Routes>
       </div>
     </ThemeProvider>
