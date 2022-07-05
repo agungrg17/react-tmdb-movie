@@ -9,13 +9,21 @@ import { ThemeProvider } from '@mui/material';
 import Navbar from './components/Navbar';
 import MovieList from './containers/MovieList';
 import theme from './themes/theme';
+import { Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/system';
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
         <Navbar></Navbar>
-        <MovieList></MovieList>
+        <Routes>
+          <Route path='/' element={<MovieList />} />
+          <Route path='about' element={<Box sx={{ mt: 10 }}>Halaman About</Box>} />
+          <Route path='indonesian' element={<Box sx={{ mt: 10 }}>Halaman Indonesia</Box>} />
+          <Route path='pricing' element={<Box sx={{ mt: 10 }}>Halaman Pricing</Box>} />
+        </Routes>
+        {/* <MovieList></MovieList> */}
       </div>
     </ThemeProvider>
   );
